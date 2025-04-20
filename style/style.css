@@ -1,0 +1,161 @@
+body.light-theme {
+    --bg-color: #ffffff;
+    --text-color: #191716;
+    --accent-color: #f8e5ee;
+    --reverse-bg-color: #3d1308;
+    --reverse-text-color: #ffffff;
+}
+
+body.dark-theme {
+    --bg-color: #302824;
+    --text-color: #ffffff;
+    --accent-color: #5c0e22;
+    --reverse-bg-color: #ffa0a5;
+    --reverse-text-color: #191716;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(font/Montserrat-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1, h2 {
+    background-color: #191716;
+    color: #ffffff;
+    padding-top: 3rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+h3, h4 {
+    border-bottom: .2rem solid var(--text-color);
+}
+
+h4 {
+    margin: .5rem;
+    padding: 0;
+}
+
+div {
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+
+img {
+    margin: auto;
+    padding: 0;
+    width: 12rem;
+    height: auto;
+    display: block;
+    border-radius: 3rem;
+    
+}
+
+#buttonDiv {
+    margin: 0;
+    padding: 0;
+}
+
+#theme-toggle {
+    background-color: var(--reverse-bg-color);
+    color: var(--reverse-text-color);
+    margin: 1rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    float: right;
+}
+
+#global{
+    margin: 0;
+    display: flex;
+}
+
+#leftDiv { /* Cette partie reste de la même couleur peu importe le thème */
+    background-color: var(--reverse-bg-color);
+    color: var(--reverse-text-color);
+}
+
+#rightDiv {
+    margin-left: .5rem;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+#sous-titre {
+    font-size: 1.2rem;
+}
+
+#noWrap {
+    white-space: nowrap;
+    margin:0;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    body{
+        text-align: left;
+    }
+
+    ul { 
+        list-style-type: none; 
+    }
+
+    #global {
+        flex-direction: column;
+
+    }
+
+    #rightDiv {
+        margin: 0;
+        margin-top: 1rem;
+    }
+} 
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    #buttonDiv {
+        display:none;
+    }
+
+    h1, h2 {
+        padding: .5rem;
+    }
+
+    div {
+        padding: 0;
+    }
+
+    img {
+        width: 10rem;
+    }
+}
