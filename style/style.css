@@ -69,6 +69,7 @@ img {
 }
 
 #buttonDiv {
+    text-align: center;
     margin: 0;
     padding: 0;
 }
@@ -83,13 +84,21 @@ img {
     font-size: 1rem;
     text-decoration: none;
     border: none;
-    float: right;
 }
 
 #global{
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+#content {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
 
 #leftDiv { /* Cette partie reste de la même couleur peu importe le thème */
     background-color: var(--reverse-bg-color);
@@ -124,12 +133,21 @@ img {
 
     #global {
         flex-direction: column;
+    }
 
+    #content {
+        flex-direction: column;
     }
 
     #rightDiv {
         margin: 0;
         margin-top: 1rem;
+    }
+
+    #buttonDiv {
+        position: static;
+        text-align: center;
+        margin-bottom: 1rem;
     }
 } 
 
