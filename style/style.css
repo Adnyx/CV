@@ -68,30 +68,6 @@ img {
     
 }
 
-#bigImage {
-    position: fixed; /* or absolute if you prefer */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 45rem;
-    z-index: 1000; /* this brings it over everything else */
-    display: none;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
-    border-radius: 1rem;
-}
-
-#darkBackground {
-    position: fixed;
-    margin:0;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.7);
-    z-index: 999;
-    display: none;
-}
-
 #buttonDiv {
     text-align: center;
     margin: 0;
